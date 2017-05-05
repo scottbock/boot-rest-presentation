@@ -1,0 +1,42 @@
+section
+  h1 HATEOAS
+  p Hypermedia As The Engine Of Application State
+
+section
+  h2 WAT?
+  p.
+    The principle is that a client interacts with a network application entirely through hypermedia provided dynamically by application servers. A REST client needs no prior knowledge about how to interact with any particular application or server beyond a generic understanding of hypermedia.
+
+section
+  h2 Huh??
+
+section
+  h3 JSON for  /employees/1
+  pre.
+    <code class="json" data-trim>
+    {
+      "firstName" : "Scott",
+      "lastName" : "Bock",
+      "employeeId" : 1234,
+      "projects" : [{...}, {...}]
+    }
+    </code>
+
+section
+  h3 HATEOAS version
+  pre.
+    <code class="json" data-trim>
+    {
+      "firstName" : "Scott",
+      "lastName" : "Bock",
+      "employeeId" : 1234,
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/employees/1"
+        },
+        "projects" : {
+          "href" : "http://localhost:8080/employees/1/projects"
+        }
+      }
+    }
+    </code>
