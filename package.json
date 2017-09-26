@@ -39,6 +39,7 @@
     "@angular/platform-browser": "~4.0.2",
     "@angular/platform-browser-dynamic": "~4.0.2",
     "@angular/router": "~4.0.2",
+    "@objectpartners/presentation-config": "^1.0.0",
     "core-js": "~2.4.1",
     "highlight.js": "~9.10.0",
     "ng-dynamic": "~3.0.0",
